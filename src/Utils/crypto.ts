@@ -101,7 +101,7 @@ export function aesDecryptGCM(
 		console.error(e.message)
 	}
 
-	const _empty = new Uint8Array()
+	const _empty = Buffer.concat([new Uint8Array(), new Uint8Array()])
 	console.error('Error: Empty Buffer')
 	return _empty
 }
